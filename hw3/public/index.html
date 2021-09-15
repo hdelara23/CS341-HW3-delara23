@@ -1,0 +1,89 @@
+<!--Written by: Hewlett De Lara-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hewlett's Cheesecake</title>
+    <!--Link the html to the css file-->
+    <link rel="stylesheet" href="./stylesheets/delarastyle.css">
+    <script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
+ </script>
+ <script type='text/javascript' src='/js/jquery.mousewheel.min.js'></script>
+</head>
+
+<div class="big-image">
+<body>
+	<!--Inserted an image using its image address and edited its size by assigning values to its width and height. Additionally, an alternative text for the image will print out if the image is not found-->
+	<h1>Cheesecake Order Form</h1>
+	<img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" alt="Strawberry Cheesecake" width="350" height="350">
+
+    <!--Created a dropdown box for the number of toppings from 1 to 5-->
+	<p>Quantity Topping</p>
+    <select class="select">
+        <option disabled selected># Toppings</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select><br>
+
+    <!--Created three radio buttons for customers to choose the flavor of their cheesecake-->
+    <p>Flavor of Choice:</p>
+    <form id="radiobuttons">
+        <input type="radio" name="flavor" id="flavor1" value="plain"> Plain<br>
+        <input type="radio" name="flavor" id="flavor2" value="cherry"> Cherry<br>
+        <input type="radio" name="flavor" id="flavor3" value="chocolate"> Chocolate<br>
+    </form><br>
+
+    <!--Created a form where customers fill in their information and write any special instructions regarding their order-->
+    <form id=notesform>
+        First Name:<br>
+        <input type="text" id="fname" name="fname"><br>
+        Last Name:<br>
+        <input type="text" id="lname" name="lname"><br>
+        Your Email:<br>
+        <input type="text" id="email" name="email"><br><br>
+        Notes:<br>
+        <textarea name="message" id="message" rows="5" cols="20">Enter any special instructions here.</textarea><br>
+        <button type="button" onclick="myFunction()">Submit</button>
+    </form>
+
+    <!--Looks for the word "vegan" in the Notes section, then print a warning message if found or proceed to checkout if not found-->
+    <script src="javascripts/vegan.js"></script>
+
+	<!--Created a hoverable list containg the 12 months-->
+    <!-- header for select dropdown button -->
+    <p style ="font-size:20px">Orders for 
+
+    <!-- select button declaration -->
+    <select name="orderMonth" id="ordersByMonth" onmouseover='this.size=3' onBlur='this.size=1;' onChange='this.size=1; this.blur()' style="background-color: cyan; margin-left: 10px;font-size:20px" >
+    
+    <!-- group name -->
+    <optgroup label="Month">
+    
+        <!-- months as selectable options (3 displayed at a time ) -->
+        <option value="1">JAN</option>
+        <option value="2">FEB</option>
+        <option value="3">MAR</option>
+        <option value="4">APR</option>
+        <option value="5">MAY</option>
+        <option value="6">JUN</option>
+        <option value="7">JUL</option>
+        <option value="8">AUG</option>
+        <option value="9">SEP</option>
+        <option value="10">OCT</option>
+        <option value="11">NOV</option>
+        <option value="12">DEC</option>
+        </p>
+    </p>
+    </optgroup>
+    </select>
+
+ 	<ul class="orders">
+   		<li>11 cherry</li>
+   		<li>17 chocolate</li>
+   		<li>31 plain</li>
+	</ul>
+</html>
