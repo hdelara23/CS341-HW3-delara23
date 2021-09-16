@@ -1,3 +1,6 @@
+// Hewlett De Lara
+
+//Unit Test to see if the mock DOM is working 
 var fs = require('fs');
 test('test selectEvent', () => {
     //Read the index.html file into a string
