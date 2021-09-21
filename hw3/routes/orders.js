@@ -1,13 +1,3 @@
-var express = require('express');
-var router = express.Router();
-
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
-
-module.exports = router;
-
 // Create an array whose objects have two properties
 const ordersArray = [
     {
@@ -28,4 +18,13 @@ const ordersArray = [
 const myJsonArray = JSON.stringify(ordersArray);
 
 // Send to the localhost client
-res.send(ordersArray);
+var express = require('express');
+var router = express.Router();
+router.get('/', function(req, res, next) {
+  res.send(ordersArray);
+});
+
+res.status(404).end();
+
+module.exports = router;
+
